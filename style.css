@@ -1,124 +1,62 @@
-/* Paleta Romântica */
-:root {
-  --bg-gradient-start: #ffe6f2;
-  --bg-gradient-end: #ffb3d9;
-  --card-bg: #ffffff;
-  --text-primary: #4a0026;
-  --text-secondary: #7a003d;
-  --button-bg: #d10068;
-  --button-hover: #a30054;
-  --shadow-color: rgba(209, 0, 104, 0.2);
-}
-
-/* Reset e box-sizing */
-*,
-*::before,
-*::after {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo da página */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-  color: var(--text-primary);
-  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+h1, h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Container principal */
-.container {
-  background: var(--card-bg);
-  max-width: 520px;
-  width: 100%;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px var(--shadow-color);
+p {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Título */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-secondary);
-}
-
-/* Pergunta */
-#question {
-  font-size: 1.25rem;
-  margin: 1.5rem 0 1rem;
-  line-height: 1.4;
-}
-
-/* Respostas (botões) */
-#answers button {
+button {
   display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff4b69;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1f4c;
+}
+
+#answers button {
   width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1rem;
-  background: var(--button-bg);
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 10px;
 }
 
-#answers button:hover {
-  background: var(--button-hover);
-  transform: translateY(-2px);
+.hidden {
+  display: none;
 }
 
-/* Botão Seguinte */
-#next-btn {
-  margin-top: 2rem;
-  background: var(--button-bg);
-  color: #fff;
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-#next-btn:hover {
-  background: var(--button-hover);
-  transform: translateY(-2px);
-}
-
-/* Resultado final */
 #result {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-top: 2rem;
-  color: var(--text-secondary);
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  #question {
-    font-size: 1.1rem;
-  }
-
-  #answers button,
-  #next-btn {
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem;
-  }
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
 }

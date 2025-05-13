@@ -1,0 +1,124 @@
+/* Paleta Romântica */
+:root {
+  --bg-gradient-start: #ffe6f2;
+  --bg-gradient-end: #ffb3d9;
+  --card-bg: #ffffff;
+  --text-primary: #4a0026;
+  --text-secondary: #7a003d;
+  --button-bg: #d10068;
+  --button-hover: #a30054;
+  --shadow-color: rgba(209, 0, 104, 0.2);
+}
+
+/* Reset e box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Container principal */
+.container {
+  background: var(--card-bg);
+  max-width: 520px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Pergunta */
+#question {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.4;
+}
+
+/* Respostas (botões) */
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--button-bg);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#answers button:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Botão Seguinte */
+#next-btn {
+  margin-top: 2rem;
+  background: var(--button-bg);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#next-btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Resultado final */
+#result {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  color: var(--text-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  #question {
+    font-size: 1.1rem;
+  }
+
+  #answers button,
+  #next-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}
